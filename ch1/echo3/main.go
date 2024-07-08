@@ -14,7 +14,18 @@ import (
 
 //!+
 func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+	ex2()
+	return
+}
+
+func ex1() {
+	fmt.Println(strings.Join(os.Args[:], " "))
+}
+
+func ex2() {
+	for i, s := range os.Args {
+		fmt.Printf("%d\t%s\n", i, s)
+	}
 }
 
 //!-
